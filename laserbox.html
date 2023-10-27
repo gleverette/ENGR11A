@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+    <style>
+    body {
+        font-family: 'Nunito';font-size: 22px;
+    }
+    </style>
+    </head>
+    <body>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Personal - Start Bootstrap Template</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Custom Google font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body class="d-flex flex-column h-100 bg-light"> 
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+            <div class="container px-5">
+                <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Professional Portfolio</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+                        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <h2 style="font-family: 'Nunito'; font-weight: bold; text-align:center; padding-top:30px;">
+            Modeling a Finger Joint Box
+        </h2>
+        <p style="text-align:justify; padding-left:50px; padding-right:80px;">
+            This project was meant to be an introductory test as I learned how to use variations of laser cutting tools, consisting of both machinery and software. However, the most difficult part of this project was creating the finger joint box, a great beginner piece for any laser cutting 
+            project as it's supposed to help the designer better understand how to model something in 3D despite the pieces being created in 2D. Since I was building a simple 6-faced enclosure for my printed circuit board (PCB) alarm clock, I needed a way to connect all 6 faces while maintaining
+            figure stability. Thus, I used finger joints, which allow for interlocking profiles of wood or other specific material to fit together; the 3D structure takes shape once all the pieces 
+            are put together. In a way, it is like designing the pieces for a 3D puzzle.<br><br>
+        </p>
+
+        <div class="row">
+            <img class="center" src="assets/Project 5/casesketch.jpg" style=" width: 500px; margin-left:500px; margin-top: -20px; margin-bottom: 20px; height: auto; transform: rotate(360deg)" />
+        </div>
+        
+        <p style="text-align:justify; padding-left:50px; padding-right:80px;">   
+            This model was designed in Fusion360 as I followed a video tutorial to better understand the workflow to creating this type of interlocking joint. Although it took a long time to model the box, I learned a lot about the other Fusion360 tools because of it. One critical part of
+            this design was mastering sketch constraints and better utilizing model components. The key to finger joints is ensuring the negative and positive spaces have equal length and width so the wood is able to slot together; this was the trickiest part to design. Starting with a center rectangle about the 
+            origin, I drew 3 rectangles along the width of the rectangle. Drawing constructions lines in between the rectangles, this ensured the shapes were in line with one another and evenly spaced apart. However, I experienced issues in which the lines would default to the same size, but they would be outside
+            the bounds of the box or only the outer lines would be equal. This same error occurred when I attempted to set the rectangles equal to one another to also ensure even spacing, only this time, the rectangles would change to drastically different sizes and the construction lines would no longer be even either. 
+            After repeated attempts and various redraws, it seems like the issue was which line I clicked first, which set the "equal" standard for all other lines I clicked afterwards. In order to minimize effort, and to take advantage of the symmetrical nature of rectangles, the inner rectangles could be mirrored to the
+            opposing side in order to ensure equivalency throughout the sketch. Constructions lines ensured parallelism, but aren't copied when mirroring occurs, allowing only the necessary parts to be reflected.
+        </p>
+        <div class="row">
+            <div class="col-lg-6" style = "margin-left: 60px">
+                <img class="center" src="assets/Project 5/basesketch.png" style=" width: 500px; height: auto; margin-left:200px; transform: rotate(360deg)" />
+            </div>
+            <div class="col-lg-6" style = "margin-right:-90px; margin-left: -75px; margin-top: 35px">
+                <img class="center" src="assets/Project 5/basemodel.png" style="margin-top: 15px; width: 400px; height: auto; margin-right:30px; margin-bottom: 60px; margin-left: 70px; transform: rotate(360deg)" />
+            </div>
+        </div>
+
+        <p style="text-align:justify; padding-top: 20px; padding-left:50px; padding-right:80px;">
+            Pictured above was all of the applied constraints, measurements, and efforts needed just to create the base of the alarm clock. As shown, the negative rectangle space is even and uniform, with each inner rectangle having a height of 3mm and a width of 15mm. To accomodate best fit dimensions
+            for the PCB, the width is 110mm and the height is 61mm. With laser cutting, I can ensure more exact measurements of the final product since there is more tolerance in the formation of each piece compared to 3D printing, in which the extra material during the additive manufacturing process affects how precise 
+            measurements can be.
+            With the base complete, I now had to draw the remaining 5 sides of the enclosure. Once again, to minimize effort, I wanted to take advantage of mirroring components and sketches within the components.<br><br> 
+
+            Working along the height of the rectangle, I began creating the new component needed. Drawing a new sketch around the origin and moving it to the correct spot would be time consuming and unreliable as there is no guarantee that the sketch would perfectly align with the adjacent side. However, using projections on certain faces, I am 
+            able to draw on a plane that references pre-existing model features, ensuring my current sketch aligns with the extruded model measurements. Once making the projection, I follow a similar workflow as before by creating a center rectangle, forming inner rectangles aligned with construction lines, and constraining the sketch dimensions to the 
+            proper measurements. I am then able to mirror the constrained inner rectangle to the other side, complete and extrude the overall sketch, and mirror the sketch to the opposing side. Here, I struggled learning about and properly using the projection tool since I wasn't always sure if I was drawing on the correct plane or if the projected sketch was sectioning out the sketches 
+            in a way I wanted. In spite of this, the parts cleanly extruded and I was able to mirror the component to the other side. I didn't face any complications when mirroring, but I did have to ensure the finger joint logic and part correlation made sense from a 2D perspective. This means the sketch portion of one face shouldn't correlate to the sketch of a different face. 
+        </p>
+
+        <div class="row">
+            <div class="col-lg-6" style = "margin-left: 60px">
+                <img class="center" src="assets/Project 5/sidesketch.png" style=" width: 500px; height: auto; margin-left:200px; margin-top: 100px; transform: rotate(360deg)" />
+            </div>
+            <div class="col-lg-6" style = "margin-right:-90px; margin-left: -75px; margin-top: 35px">
+                <img class="center" src="assets/Project 5/sidemodel.png" style="margin-top: 15px; width: 400px; height: auto; margin-right:30px; margin-bottom: 60px; margin-left: 70px; transform: rotate(360deg)" />
+            </div>
+        </div>
+
+        <p style="text-align:justify; padding-top: 20px; padding-left:50px; padding-right:80px;">
+           Once again, repeating a similar workflow as the other components, I sketched a center rectangle and the corresponding inner rectangles, set constraints and leveled out all measurements, mirrored the necessary sketches, extruded the component sketch to the length of the ply wood (about 3mm), and mirrored the top component to the base.
+           With this, the box was finally complete! Although the measurements for the alarm clock's PCB face were much more exact compared to making a 3D printed case, I designed in a compact way hoping the battery would comfortably rest inside the box behind the PCB. The cutouts on the face were the exact speaker, button, and interface measurements as
+           my original recordings when previously designing the case. This time, however, I was able to use the exact measurements I recorded rather than accoodating for a ~2mm as before. It's now time to laser cut!
+
+        </p>
+        <div class="row">
+            <div class="col-lg-6" style = "margin-left: 60px">
+                <img class="center" src="assets/Project 5/boxtopsketch.png" style=" width: 550px; height: auto; margin-left:200px; margin-top: 30px; transform: rotate(360deg)" />
+            </div>
+            <div class="col-lg-6" style = "margin-right:-90px; margin-left: -75px; margin-top: 35px">
+                <img class="center" src="assets/Project 5/completebox.png" style="margin-top: -10px; width: 500px; height: auto; margin-right:30px; margin-bottom: 60px; margin-left: 70px; transform: rotate(360deg)" />
+            </div>
+        </div>
+
+        <h2 style="font-family: 'Nunito'; font-weight: bold; text-align:center; padding-top:30px;">
+            LightBurn Software and Laser Cutting Safety
+        </h2>
+        <p style="text-align:justify; padding-left:50px; padding-right:80px;">
+            Modeling the alarm clock case from scratch was definitely the most difficult part, but we now had to move all necessary parts into the LightBurn Software. This allows the laser cutting machine to read and understand where it needs to go without any additional steps of communication between the intended design and the machine that has the tools 
+            to execute the design. To properly export the sketches made in Fusion360 to a DXF file that could be read by the software, I determined the drawn projections for each components then saved and exported the sketches as needed.<br><br>
+            
+            Two important things to keep in mind when preparing parts for laser cutting is the placement of the sketches and the laser settings. It's important to arrange the pieces in a tactful way, especially if mulitple cuts are being performed on the same machine, so all of the soot and material debris isn't congregated into one corner. 
+            This also maximizes material space so more cuts can be performed on the same sheet of material. The laser settings are important in determining how defined the cut is; in this case, I only modified the laser power and speed setting them to 100% power and 20% speed on the Mira 7 printer. Higher power means more of the material is being cut for a defined sketch, but that also means 
+            less control as the laser is more unpredictable with the more power it has. This is why the speed has to be moderately low so the laser has time to properly trace along the required path. In the video below, you can see smoke within the laser cutting chamber. This is because the laser gas, when coming out of the nozzle, heats up the surrounding area and causes smoking; it is constantly 
+            lighting itself on fire in order to be hot enough to engrave or cut into materials. However, since proper smoke ventilation, this is a dangerous process. Our material was a type of upgraded plywood, MDF, in which the wood was slightly denser and wouldn't release as many fumes when cut in to. The laser cut along the sketch lines predetermined by the LightBurn Software, resulting in the densely 
+            packed MDF board filled with other alarm clock case cuts. 
+        </p>
+        <div class="row">
+            <div class="col-lg-4" style = "margin-left: 60px">
+                <img class="center" src="assets/Project 5/smallcase.jpg" style=" width: 500px; height: auto; margin-left:40px; margin-top:80px; transform: rotate(90deg)" />
+            </div>
+            <div class="col-lg-4" style = "margin-right:-90px; margin-left: -75px; margin-top: 35px">
+                <video style = "margin-top: -40px; margin-left: 70px" width="320" height="640" controls>
+                    <source src="assets/Project 5/lasercutting.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="col-lg-4" style = "margin-left: 60px">
+                <img class="center" src="assets/Project 5/lasercut.jpg" style="width: 500px; height: auto; margin-left: -40px; transform: rotate(360deg)" />
+            </div>
+        </div>
+        <p style="text-align:justify; padding-left:50px; padding-right:80px;">
+            My piece did go through some slight iterative changes, in which the shorter piece that affects box thickness was too small to accomodate both the wire and battery compartment. One big improvement in this part making process compared to 3D printing is that the entire case doesn't have to be re-cut but only the necessary parts due to the precision and interlocking 
+            nature of the case's pieces. As shown below, the case is now thicker and has ample space to keep everything within the wooden walls rather than have the wire and battery sticking out. 
+        </p>
+        <div class="row">
+            <div class="col-lg-4" style = "margin-left: 60px">
+                <img class="center" src="assets/Project 5/completecase.jpg" style="margin-top: 60px; margin-bottom: 20px; width: 500px; height: auto; margin-left:10px; transform: rotate(360deg)" />
+            </div>
+            <div class="col-lg-4" style = "margin-right:-90px; margin-left: -75px; margin-top: 35px">
+                <img class="center" src="assets/Project 5/case1.jpg" style="margin-top: 40px; width: 500px; height: auto; margin-right:30px; margin-left: 20px; margin-bottom: 80px; transform: rotate(270deg)" />
+            </div> 
+            <div class="col-lg-4" style = "margin-right:-90px; margin-left: -75px; margin-top: 35px">
+                <img class="center" src="assets/Project 5/case2.jpg" style="margin-top: 40px; width: 500px; height: auto; margin-right:30px; margin-left: 60px; margin-bottom: 80px; transform: rotate(270deg)" />
+            </div> 
+        </div>
+
+    
